@@ -1,0 +1,33 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(„Æ‹ıÿÿÿÿ
+g	java:S116"RRename this field "min_ele" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìëò
+f
+java:S1149	"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Õí„¾
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÄïÖÎùÿÿÿÿ
+k
+java:S1149'"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ê–´Åûÿÿÿÿ
+f
+java:S1149+"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ŒÑ®ó
+k
+java:S11490"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(“Æİşÿÿÿÿÿ
+k
+java:S1149;"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(û›şöıÿÿÿÿ
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(–¢¦ñ
+C
+java:S1172'"(Remove this unused method parameter "s".(Ê–´Åûÿÿÿÿ
+W
+java:S11261"AReplace this if-then-else statement by a single return statement.(éÌîõ
+N	java:S106="9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(¶»¬ªÿÿÿÿÿ
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106N"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106R"9Replace this use of System.out or System.err by a logger.(ïÒìÑ
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(ïÒìÑ

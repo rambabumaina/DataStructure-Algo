@@ -1,0 +1,14 @@
+
+‘
+java:S13192"{The type of the "linkedHashSet" object should be an interface such as "Set" rather than the implementation "LinkedHashSet".(Ôû£õ
+E
+java:S3740"/Provide the parametrized type for this generic.(ÙÔ±
+E
+java:S37402"/Provide the parametrized type for this generic.(Ôû£õ
+E
+java:S3740K"/Provide the parametrized type for this generic.(ÑĞ¦ú
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øé…Ä
+k
+java:S1149M"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(û›şöıÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(çèÖıÿÿÿÿ
+P	java:S125,"<This block of commented-out lines of code should be removed.(•¼ÌU

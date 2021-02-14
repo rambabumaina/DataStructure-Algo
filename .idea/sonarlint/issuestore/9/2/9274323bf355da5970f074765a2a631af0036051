@@ -1,0 +1,8 @@
+
+^
+java:S2094
+"BRemove this empty class, write its code or make it an "interface".(»‰à|8‹È¬ù.
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8’½«¬ù.
+L
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8’½«¬ù.

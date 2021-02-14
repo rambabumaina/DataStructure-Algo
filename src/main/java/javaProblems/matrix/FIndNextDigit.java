@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FIndNextDigit {
 
     public static void main(String[] args) {
-        String num = "1572";  // 14235 13452
+        String num = "132648";  // 14235 13452
         System.out.println(nextGreaterNumber(num.toCharArray()));
     }
 
@@ -30,7 +30,7 @@ public class FIndNextDigit {
         int minIndex =0;
 
         for (int j = i ; j<number.length;j++){
-            if(number[j] > number[i-1] && min> number[j]){
+            if(number[j] > number[i-1] && min > number[j]){
                 minIndex = j;
                 min=number[j];
             }

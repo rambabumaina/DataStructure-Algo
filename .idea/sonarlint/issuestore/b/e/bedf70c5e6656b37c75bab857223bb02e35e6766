@@ -1,8 +1,0 @@
-
-S	java:S106J"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê¶Õšûÿÿÿÿ8Öº×³õ.
-N	java:S106G"9Replace this use of System.out or System.err by a logger.(…ÙÆð
-x
-java:S4165"bRemove this useless assignment; "head" already holds the assigned value along all execution paths.(¡…Õ§
-A
-java:S16597"&Declare "previous" on a separate line.(ðçÏéúÿÿÿÿ

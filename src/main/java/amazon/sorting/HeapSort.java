@@ -6,21 +6,18 @@ import java.util.Arrays;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int arr[]= {7,5,15,3,10,6,4,2};
-
+        int[] arr = {20, 50, 10, 25, 5, 15};
          heapSort(arr);
-//         Arrays.stream(arr).forEach(System.out::println);
     }
 
     public static void heapSort(int[] arr){
-
         buildHeap(arr, arr.length);
 
-        for (int i = arr.length ; i> 0 ;i--){
+        for (int i = arr.length-1 ; i> 0 ;i--){
             int temp = arr[0];
-            arr[0] = arr[i-1];
-            arr[i-1] = temp;
-            heapify(arr, 0, i-1);
+            arr[0] = arr[i];
+            arr[i] = temp;
+            heapify(arr, 0, i);
         }
 
         Arrays.stream(arr).forEach(s-> System.out.print(s + " "));
@@ -33,6 +30,8 @@ public class HeapSort {
         }
     }
 
+    //Heap should follow COmplate binary tree or almost complete binary tree properties
+    //find a root node and compare left and right child should be lessthen(miheap)/greaterthan(maxheap) if not swap
     public static void heapify(int[] arr, int index, int size){
 
         int leftChild = index*2+1;
@@ -52,9 +51,7 @@ public class HeapSort {
             int temp = arr[minIndex];
             arr[minIndex] = arr[index];
             arr[index] = temp;
-
             heapify(arr,minIndex, size);
         }
-
     }
 }

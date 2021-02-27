@@ -1,6 +1,0 @@
-
-Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Ã‹îùÿÿÿÿ8º¨öÕø.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(˜ƒÂ¿úÿÿÿÿ8”µ€Öø.
-X	java:S125"<This block of commented-out lines of code should be removed.(¬«€×8ê›”Õø.
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8œãêÕø.

@@ -1,7 +1,7 @@
 package amazon.arrays;
 
 import java.util.HashSet;
-
+//https://practice.geeksforgeeks.org/problems/sum-equals-to-sum4006/1
 public class SumEqualsSum {
 
     public static void main(String[] args) {

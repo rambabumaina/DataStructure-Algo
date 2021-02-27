@@ -3,6 +3,9 @@ package amazon.sorting;
 
 import java.util.Arrays;
 
+//Merge sort and Quick Sort follow dive and conquer
+//merger sort is slower for small elements because is has many function calls compare to quick sort
+
 //O(nlogn)
 public class MergeSort {
     public static void main(String[] args) {
@@ -25,11 +28,14 @@ public class MergeSort {
     }
         private static void merge(int []arr, int low1, int high1, int low2, int high2) {
 
+        //Create list of same size of array
             int brr[] = new int[high2-low1+1];
 
             int i = low1;
             int j = low2;
             int k = 0;
+
+            //Loop will run till, either all element of list1 and list2 to copied to brr
             while (i <= high1 && j <= high2) {
                 if (arr[i] < arr[j]) {
                     brr[k++] = arr[i++];
@@ -37,6 +43,9 @@ public class MergeSort {
                     brr[k++] = arr[j++];
                 }
             }
+
+            // Copy remaining list to brr
+            // suppose when list2 is bigger then list1 then copy remaining element to the brr
             if (i == high1+1) {
                 while (j <= high2) {
                     brr[k++] = arr[j++];

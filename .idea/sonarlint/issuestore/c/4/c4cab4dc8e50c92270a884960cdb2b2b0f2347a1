@@ -1,6 +1,0 @@
-
-m
-java:S1149%"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ã¦Ò8æÁï¹ö.
-_
-java:S2259("BA "NullPointerException" could be thrown; "root" is nullable here.(÷ü™8æÁï¹ö.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¼ÄÈâÿÿÿÿÿ8¡ƒğ¹ö.

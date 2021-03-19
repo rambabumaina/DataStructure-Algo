@@ -6,7 +6,8 @@ import java.util.Arrays;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] arr = {20, 50, 10, 25, 5, 15};
+//        int[] arr = {20, 50, 10, 25, 5, 15};
+        int arr[] = {12, 5, 20,40,787, 1, 23};
          heapSort(arr);
     }
 

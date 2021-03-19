@@ -2,9 +2,10 @@ package amazon.arrays;
 
 import java.util.Arrays;
 
+//https://practice.geeksforgeeks.org/problems/move-all-zeroes-to-end-of-array0751/1
 public class MoveAllZeroesEnd {
     public static void main(String[] args) {
-        int Arr[] = { 3, 5, 0, 0, 4};
+        int Arr[] = { 0, 0, 3, 5, 0, 0, 4};
         Arrays.stream(Arr).forEach(i -> System.out.print(i + " "));
         System.out.println();
         pushZerosToEnd(Arr, Arr.length);

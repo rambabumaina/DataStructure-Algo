@@ -2,10 +2,11 @@ package amazon.arrays;
 
 import java.util.Arrays;
 
+//https://practice.geeksforgeeks.org/problems/k-largest-elements3736/1
 public class KLargestElement {
 
     public static void main(String[] args) {
-        int [] arr = {1, 23, 12, 9, 30, 2, 50};
+        int [] arr = {100, 23, 12, 9, 30, 200, 50};
         int k =3;
         Heap heap = new Heap(k);
 
@@ -14,6 +15,11 @@ public class KLargestElement {
         }
 
         heap.buildHeap();
+
+        Arrays.stream(arr).forEach(s -> System.out.print(s + " "));
+        System.out.println();
+        //
+
         for (int i = k ; i< arr.length; i++){
             if(heap.arr[0] < arr[i]){
                 heap.arr[0] = arr[i];

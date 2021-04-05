@@ -2,10 +2,10 @@ package amazon.tree;
 
 public class Node {
 
-    int data;
-    Node left, right;
+    public int data;
+    public Node left, right;
 
-    Node(int data) {
+    public Node(int data) {
         this.data = data;
     }
 

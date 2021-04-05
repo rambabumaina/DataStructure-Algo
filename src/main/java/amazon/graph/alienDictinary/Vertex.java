@@ -1,4 +1,4 @@
-package amazon.graph;
+package amazon.graph.alienDictinary;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,23 +6,24 @@ import java.util.List;
 public class Vertex {
 
     Character id;
-    List<Vertex> adjVertices;
+    List<Vertex> AdjacentVertexes;
 
     Vertex(Character id){
         this.id = id;
-        adjVertices = new ArrayList<>();
+        AdjacentVertexes = new ArrayList<>();
     }
 
     public Character getId() {
         return id;
     }
 
+    //return All Adjacent vertex
     public List<Vertex> getAdjVertices() {
-        return adjVertices;
+        return AdjacentVertexes;
     }
 
-    //Add All Adjucent V
+    //Add All Adjacent V
     public void addAdjVertex(Vertex adjVer){
-        adjVertices.add(adjVer);
+        AdjacentVertexes.add(adjVer);
     }
 }

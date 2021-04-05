@@ -13,13 +13,13 @@ public class LowestCommonAncestorBinaryTree {
         root.right = new Node(3);
 
 
-            root.left.left=new Node(4);
+        root.left.left=new Node(4);
         root.left.right=new Node(5);
 
-//        Node lca = lca(root, 3, 5);
-//        System.out.println(lca.data);
+        Node lca = lca(root, 3, 5);
+        System.out.println(lca.data);
 
-        System.out.println(findLCA_Recurssive(root, 3, 5));
+//        System.out.println(findLCA_Recurssive(root, 3, 5));
 
     }
 
@@ -60,6 +60,7 @@ public class LowestCommonAncestorBinaryTree {
         return new Node(findLca(a1, a2));
     }
 
+    //Return previous match
     private static int findLca(int[] a1, int[] a2) {
         int i = 0;
         while (i< a1.length && i <a2.length){

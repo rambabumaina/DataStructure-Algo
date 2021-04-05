@@ -1,12 +1,13 @@
-package amazon.graph;
+package amazon.graph.alienDictinary;
 
-public class GraphTest {
+//https://practice.geeksforgeeks.org/problems/alien-dictionary/1
+public class AlienDictionary {
 
 
     public static void main(String[] args) {
 //        String[] dict = {"baa","abcd","abca","cab","cad"};
         String [] dict = {"caa","aaa","aab"};
-        GraphTest t = new GraphTest();
+        AlienDictionary t = new AlienDictionary();
 
         String order = t.findOrder(dict, dict.length, 3);
         System.out.println(order);
@@ -48,18 +49,18 @@ public class GraphTest {
 
 
     public Graph buildGraph(String [] dict, int N, int K){
-        Graph g = new Graph();
+        Graph graph = new Graph();
         for (int i = 0 ; i< dict.length-1 ; i++ ){
 
             int j = 0;
             while (j < dict[i].length() && j< dict[i+1].length()){
                 if(dict[i].charAt(j) != dict[i+1].charAt(j)){
-                    g.addEdge(dict[i].charAt(j), dict[i+1].charAt(j));
+                    graph.addEdge(dict[i].charAt(j), dict[i+1].charAt(j));
                     break;
                 }
                 j++;
             }
         }
-        return g;
+        return graph;
     }
 }

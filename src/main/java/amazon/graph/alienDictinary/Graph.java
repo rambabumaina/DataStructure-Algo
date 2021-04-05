@@ -1,4 +1,4 @@
-package amazon.graph;
+package amazon.graph.alienDictinary;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,7 +52,7 @@ public class Graph {
         }
 
         vertex2 = allVertex.get(v2);
-
+        //B->A
         vertex1.addAdjVertex(vertex2);
 
         allEdges.add(new Edge(vertex1, vertex2));

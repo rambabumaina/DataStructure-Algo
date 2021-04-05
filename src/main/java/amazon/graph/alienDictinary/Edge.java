@@ -1,4 +1,4 @@
-package amazon.graph;
+package amazon.graph.alienDictinary;
 
 public class Edge {
 

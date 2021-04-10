@@ -1,6 +1,6 @@
 package practice;
 
-import amazon.tree.Node;
+import geeksforgeeks.amazon.tree.Node;
 
 
 public class Test {

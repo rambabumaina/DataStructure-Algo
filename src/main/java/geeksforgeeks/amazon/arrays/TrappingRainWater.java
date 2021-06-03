@@ -1,9 +1,11 @@
 package geeksforgeeks.amazon.arrays;
 
 //https://www.geeksforgeeks.org/trapping-rain-water/
+//o(n)2
 public class TrappingRainWater {
     public static void main(String[] args) {
        int  arr[] = {8, 8, 2, 4, 5, 5, 1};
+
         System.out.println(trappingWater(arr,arr.length));
 
     }

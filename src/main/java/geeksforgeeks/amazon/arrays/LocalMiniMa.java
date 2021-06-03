@@ -1,8 +1,10 @@
 package geeksforgeeks.amazon.arrays;
 
+//https://www.geeksforgeeks.org/find-local-minima-array/
+//smaller then Both the neighbors
 public class LocalMiniMa {
     public static void main(String[] args) {
-        int arr[] = {9, 8, 7, 6, 5, 4, 3};
+        int arr[] = {9, 6, 3, 14, 5, 7, 4};
         System.out.println(localMinima(arr, arr.length));
     }
 

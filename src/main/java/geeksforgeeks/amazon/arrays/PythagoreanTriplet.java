@@ -2,6 +2,15 @@ package geeksforgeeks.amazon.arrays;
 
 import java.util.Arrays;
 
+//https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018/1
+
+/**
+ * Approach 1: Run three loops i,j ,k , check the A+b=c or a+c=b or c+b=a this needs o(n)3
+ *
+ * Approach 2: Sort the array
+ * Run Two loops, keep one pointer k at the last element and i at 0 and j at k-1
+ * take square and check if i+j =k if yes return true else run for k-1 and so on...
+ */
 public class PythagoreanTriplet {
     public static void main(String[] args) {
 

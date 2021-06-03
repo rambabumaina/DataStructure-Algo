@@ -1,7 +1,9 @@
 package java8.streams;
 
 import java.util.OptionalInt;
+import java.util.concurrent.ForkJoinPool;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class InStreamDemo {
     public static void main(String[] args) {
@@ -25,6 +27,5 @@ public class InStreamDemo {
         System.out.println();
         OptionalInt Max = IntStream.of(1, 2, 3, 4, 5, 6, 7).max();
         System.out.println("Print Max:"+Max.getAsInt());
-
     }
 }

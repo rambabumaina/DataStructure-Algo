@@ -3,14 +3,13 @@ package geeksforgeeks.amazon.arrays;
 public class MaximumElementInArray {
     public static void main(String[] args) {
 
-//        int arr[] = {8, 10, 20, 80, 100, 200, 400, 500, 350, 250, 150};
-        int arr[] = {500, 350, 250, 150};
+        int arr[] = {8, 10, 20, 80, 100, 200, 400, 500, 350, 250, 150};
+//        int arr[] = {500, 350, 250, 150};
        // int arr[] = {8, 10, 20, 80, 100, 200, 400, 500};
         System.out.println( maximumElementInArray(arr, 0, arr.length-1));
     }
 
     private static int maximumElementInArray(int[] arr, int low, int high) {
-
         if(high >= low){
             int mid = low+(high-low)/2;
 

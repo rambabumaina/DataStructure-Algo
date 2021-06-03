@@ -2,6 +2,8 @@ package geeksforgeeks.amazon.arrays;
 
 import java.util.ArrayList;
 
+//https://practice.geeksforgeeks.org/problems/maximize-number-of-1s0905/1
+//TBD
 public class MaximizeNumberOf_1 {
     public static void main(String[] args) {
 
@@ -9,10 +11,9 @@ public class MaximizeNumberOf_1 {
         int M = 0;
 
         System.out.println(findZeroes(arr, arr.length, M));
-
     }
 
-    // m is maximum of number zeroes allowed to flip
+    // M is maximum of number zeroes allowed to flip
     static int findZeroes(int arr[], int n, int m) {
 
         ArrayList<Integer> list = new ArrayList<>(); //2

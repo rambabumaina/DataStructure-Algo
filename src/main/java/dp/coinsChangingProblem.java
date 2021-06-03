@@ -1,4 +1,4 @@
-package geeksforgeeks.amazon.dp;
+package dp;
 
 import java.util.Arrays;
 

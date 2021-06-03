@@ -32,9 +32,11 @@ public class Maximum_Diff_Bw_2_elem {
         int minEle = arr[0];
 
         for (int i = 1; i < n; i++) {
-            if (arr[i] - minEle > maxDiff) {
+            if (arr[i] - minEle > maxDiff) { // If max diff less then diff the update it
                 maxDiff = arr[i] - minEle;
             }
+
+            //make it small min element
             if (arr[i] < minEle) {
                 minEle = arr[i];
             }

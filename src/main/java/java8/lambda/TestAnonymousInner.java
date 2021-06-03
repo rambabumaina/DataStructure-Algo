@@ -10,11 +10,7 @@ public class TestAnonymousInner{
             void eat(){System.out.println("nice fruits");}
         };
         p.eat();
-
-        Person p2=new Person(){
-            void eat(){System.out.println("nice fruits");}
-        };
-        p2.eat();
+        p.eat();
         System.out.println("hello");
     }
 }

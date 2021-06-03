@@ -6,6 +6,8 @@ import java.util.Map;
 
 
 /**
+ *  (count_of_charS)!/(count of duplicate)! => 3!/1! = 3*2*1=6
+ *
  * 1. Calculate the count of characters using Map
  * 2. Create 2 Arrays one for characters one for count
  * 3. Fill the arrays from map
@@ -20,6 +22,7 @@ public class PermutationString {
     public static void permutation(String str) {
         Map<Character, Integer> m = new HashMap<>();
 
+        // Find the count of each character
         for (int i = 0; i < str.length(); i++) {
             if (m.containsKey(str.charAt(i))) {
                 m.put(str.charAt(i), m.get(str.charAt(i)) + 1);
@@ -28,7 +31,7 @@ public class PermutationString {
             }
         }
 
-        //Keep characters in char array and count in count array
+        // Keep characters in char array and count in count array
         Character[] keys = new Character[m.size()];
         int[] count = new int[m.size()];
 
@@ -39,13 +42,26 @@ public class PermutationString {
             i++;
         }
 
-        permutation(keys, count);
+        Character [] result = new Character[str.length()];
+        permutation(keys, count, result, 0);
     }
 
-    private static void permutation(Character[] keys, int[] counts) {
+    private static void permutation(Character[] keys, int[] counts, Character [] result, int depth) {
 
-        Arrays.stream(keys).forEach(s -> System.out.print(s + " "));
-        System.out.println();
-        Arrays.stream(counts).forEach(s -> System.out.print(s + " "));
+        if(depth == result.length){
+            Arrays.stream(result).forEach(s -> System.out.print(s + " "));
+            System.out.println();
+            return;
+        }
+
+        for (int i =0 ; i< keys.length; i++){
+            if(counts[i] > 0){
+                result[depth] = keys[i];
+                counts[i]--;
+                permutation(keys,counts,result,depth+1);
+                counts[i]++;
+            }
+
+        }
     }
 }

@@ -16,14 +16,12 @@ public class MergeSort {
     }
 
     public static void mergeSort(int arr[], int low, int high) {
-
         if (high > low) {
             int mid = low + (high - low) / 2;
             mergeSort(arr, low, mid);
             mergeSort(arr, mid + 1, high);
 
             merge(arr, low, mid, mid+1, high);
-
         }
     }
         private static void merge(int []arr, int low1, int high1, int low2, int high2) {

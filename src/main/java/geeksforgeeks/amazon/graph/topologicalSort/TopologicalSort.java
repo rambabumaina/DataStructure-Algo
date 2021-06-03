@@ -14,8 +14,8 @@ public class TopologicalSort {
         ArrayList<Integer> v5 = new ArrayList<>(Arrays.asList(2,0));
 
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>(Arrays.asList(v0, v1, v2, v3,v4,v5));
-        int [] re = topoSort(graph.size(), graph);
-
+        int [] result = topoSort(graph.size(), graph);
+        Arrays.stream(result).forEach(r -> System.out.print(r + " "));
     }
 
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {

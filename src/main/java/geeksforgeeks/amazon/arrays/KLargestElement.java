@@ -3,6 +3,7 @@ package geeksforgeeks.amazon.arrays;
 import java.util.Arrays;
 
 //https://practice.geeksforgeeks.org/problems/k-largest-elements3736/1
+//Heap sort
 public class KLargestElement {
 
     public static void main(String[] args) {

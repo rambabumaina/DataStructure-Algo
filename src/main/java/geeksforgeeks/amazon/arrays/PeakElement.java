@@ -1,5 +1,6 @@
 package geeksforgeeks.amazon.arrays;
 
+//https://practice.geeksforgeeks.org/problems/peak-element/1
 public class PeakElement {
 
     public static void main(String[] args) {
@@ -12,7 +13,6 @@ public class PeakElement {
 
     public int peakElement(int[] arr,int n)
     {
-
         if(arr.length == 1 || arr[0] > arr[1] ){
             return 0;
         }else {

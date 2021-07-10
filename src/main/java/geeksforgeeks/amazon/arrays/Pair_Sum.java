@@ -47,7 +47,7 @@ public class Pair_Sum {
         return false;
     }
 
-    //o(logn)
+    //o(nlogn)
     public static boolean is_pair_exists(int[] arr, int sum){
 
         Arrays.sort(arr);

@@ -7,9 +7,9 @@ public class KthSmakestElement {
         root.left = new Node(1);
         root.right = new Node(3);
 
+        KthSmakestElement element = new KthSmakestElement();
         int k = 2;
-
-
+        System.out.println(element.KthSmallestElement(root, k));
     }
 
     public int KthSmallestElement(Node root, int K)

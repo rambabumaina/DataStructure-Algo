@@ -1,0 +1,330 @@
+LA SCRIPT MACHINES:
+
+Prod VM : 10.8.85.5
+Password : 
+
+Stage VM : 10.8.63.136
+Password : 
+
+QA VM : 10.8.173.207
+Password : Changeme@12345
+
+DEV VM : 10.8.173.203
+Password : ChangeMe@12345
+
+*********************************
+
+https://confluence.honeywell.com/display/Niagara/Forge+Connect+System+Test+Knowledge+Document
+
+
+//@CrossOrigin(origins = { "http://localhost:3000" })
+
+https://acstoolssupport.honeywell.com/servicedesk/customer/portal/13/CBDO-21939
+
+******************
+API:
+https://integrated-allegretto.azurewebsites.net/
+
+DEV URL AND KEY:
+https://devb-api-mgmt.azure-api.net/v1
+33c3f98b91e94ad993a1772459750497
+
+QA:
+https://gatewaymanagerapi-siwqgynv-qa.dev.spec.honeywell.com/
+77eeecd7470c4b3fbddb0eab84ed85fe
+
+***********************************************************
+
+nareshkumar.dhandapani@devbhonidentity.onmicrosoft.com
+Tridium123
+
+*************************
+
+Arm DeVICE setup:
+172.20.152.191
+
+wifi password:
+
+cnet@2018
+
+cp config ~/.kube/config.  
+
+localhost:8080/api/gateways/
+
+URLS: 
+
+DEV
+https://devb-api-mgmt.azure-api.net/v1
+ocp-apim-subscription-key: 33c3f98b91e94ad993a1772459750497
+organizationid: AA163706368671144
+
+
+wireshark:
+query: (ip.dst==146.148.90.233 and  ip.src == 10.79.193.75) or ( ip.src==146.148.90.233 or  ip.dst == 10.79.193.75)
+
+*******************
+
+ADMINPORTAL:
+https://portaldev.dev.honeywellcloud.com/#/CustomersOrg
+https://integrated-allegretto.azurewebsites.net/#/CustomersOrg
+https://aist.manage.honeywellcloud.com
+
+*************************************************************************************
+DAN ACCOUNT KEY:
+https://api.us-east-1.mbedcloud.com/v3/devices/gatewayId
+Bearer ak_1MDE2ODg2YTUzMjNjOGE4ZmQwYzVkZDM1MDAwMDAwMDA016daef8f6ccfe29037b0a7e00000000FDCZTA2rN0jx3FBIFbVSlnjRqioPijj3
+
+
+honeywell CaaS Dev - API Key :
+Bearer ak_1MDE2ZWM4OTlmNjUzYWU2MjgxZTgxOTMyMDAwMDAwMDA016eff1ce137925aab47482d00000000h13B3Xhpaf5eSDgURTbmKbnRHluLrZ6W 
+
+
+honeywell CaaS LA - API Key  is:
+Bearer ak_1MDE2ZWVjMjUyYTljYWUzY2U2MGZlZWU4MDAwMDAwMDA016f0d8b707bae3ce60feee800000000jc8ZX7BjyQiYHxGE8NZNsDBhqrSAGiSf 
+
+MASTER TOKEN:
+TENANT-MASTER-TOKEN=ak_1MDE2ZGY4YzE3NjkwNTYzODZjMGI5NjkwMDAwMDAwMDA0170e2f39d594673180e751f00000000zE3nciZXjR7arPXps2GlNHjxJ0S8Q1ZU
+
+*************************************************************************************
+kubectl get node -o wide
+kubectl exec --kubeconfig ./skydev nextnine-0176043d96d300000000000100161140 -- service --status-all
+kubectl exec --kubeconfig ./skydev nextnine-0176043d96d300000000000100161140 -- cat /opt/nextnine/v4.9/log/site.log
+
+
+kubectl cp hosts nextnine-01712a1608f70000000000010015d79c:/root/hosts
+kubectl exec -it nextnine-01712a1608f70000000000010015d79c -- /bin/bash
+
+
+kubectl exec nextnine-01712a1608f70000000000010015d79c -- service VSE stop
+kubectl exec nextnine-01712a1608f70000000000010015d79c -- service VSE start 
+
+kubectl create configmap nextnine-config-01712a1608f70000000000010015d79c --from-file=vse_files --output yaml --dry-run=true > nextnine-config.yaml
+
+*****************************
+RootFOlder DELETE:
+cd /var/snap/hce-pelion-edge/common/kubernetes-volumes/vse/
+sudo rm -rf rootfolder
+
+U51148F4M0K1N/O/G2V/C/T1G0
+
+$$$$$$$$$$$$$
+Copy folder from Container:
+kubectl exec -it nextnine-0170ef22c4bd0000000000010013c954 /bin/sh
+kubectl cp nextnine-01722d1a4b440000000000010012c9f6:/opt/nextnine/v4.9/Data/Perl .
+
+***************************************************************
+EnrollmentID: sudo snap get fcg-admin enrollment-id
+GatewayType: sudo cat /sys/devices/virtual/dmi/id/product_name
+Serial Number : sudo cat /sys/class/dmi/id/product_serial
+DiskSize : cat /sys/block/loop0/size
+Memory: df -x squashfs -h
+
+snap set core service.ssh.disable=false
+
+ps -eaf | grep hostname-override
+
+configmap from folder files:
+kubectl create configmap nextnine-config-01712a1608f70000000000010015d79c --from-file=vse_files --output yaml --dry-run=true > nextnine-config.yaml
+
+http://127.99.99.99:12530/siteserver
+
+*********************************************************
+Peloin edge logs:
+snap logs -n=all pelion-edge.edge-core
+
+sudo snap logs -n=all hce-pelion-edge.fp-edge
+
+sudo snap logs -n=all pelion-edge.kubelet -error
+
+sudo snap logs -f pelion-edge.dockerd
+
+sudo start stop pelion-edge
+sudo snap stop pelion-edge
+
+
+sudo snap restart hce-pelion-edge.kubelet
+
+snap services
+
+snap restart hce-pelion-edge.kubelet
+
+kubectl delete pod nextnine-01749177728b000000000001001cbe2d 	
+
+*****************************************************************
+snap-1.12.1: snap update
+
+snap refresh
+chmod +x ./dell_setup.sh
+sudo ./snapup15_1121.sh dev --enableSsh
+
+snap set core refresh.timer="managed"
+---------------------------------------------------------------------------
+Start Stop Services:
+sudo snap stop pelion-edge
+sudo snap start fcg-admin.init
+
+*******
+MTU Packet size:
+nmcli c m "Wired connection 2" ethernet.mtu 1280
+nmcli c m "Wired connection 1" ethernet.mtu 1280
+
+********************************
+-	snap install dell-managed-refresh
+-	snap set core refresh.timer="managed"
+
+grunt serve --target=sit
+
+
+My WIKI:
+https://confluence.honeywell.com/display/Niagara/Configuration+and+automatic+deployment+of+Niagara+pod
+https://confluence.honeywell.com/pages/viewpage.action?pageId=358690291
+
+
+***********************************************************************
+
+Key Store Commands:
+openssl pkcs12 -export -inkey key1.key -in client.pem -out C:\kubectl\feb\identity.p12 --name mykey
+keytool -importkeystore -srckeystore identity.p12 -srcstoretype pkcs12 -destkeystore identity.jks -deststoretype JKS -alias mykey
+ 
+******************************************
+apt-get update
+apt-get install -y ca-certificates
+apt-get install speedtest-cli
+
+# speedtest-cli
+Retrieving speedtest.net configuration...
+Testing from Bogons Ltd (93.186.32.17)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by Converged Communication Solutions Limited (Aberdeen) [159.59 km]: 388.945 ms
+Testing download speed.................................................................
+Download: 17.41 Mbit/s
+Testing upload speed...................................................................
+Upload: 2.31 Mbit/s
+
+**********************************
+IMAGE-PULL-SECRETS=ewoJImF1dGhzIjogewoJCSJjYWFzMWRldmFjci5henVyZWNyLmlvIjogewoJCQkiYXV0aCI6ICJNekZqTWpBd05HTXRZVE5tWXkwME1UQmtMVGt3TkRNdFpESmhOalEyWkRWbVpEa3pPazFkWVc1M2JuRlZVbmhxVDI5c1MzcFRPVUJJWlhKYVNXaFBiRGs2TkYwdyIKCQl9Cgl9LAoJIkh0dHBIZWFkZXJzIjogewoJCSJVc2VyLUFnZW50IjogIkRvY2tlci1DbGllbnQvMTkuMDMuMiAobGludXgpIgoJfQp9
+
+*******
+Login to Azure Docker registry and push to ACR
+-----------------------------------------------------
+docker login caas1devacr.azurecr.io -u da494b0c-ab64-4e03-bbc3-cfa5e7a9dc9c -p 8.DSQ0Hjo~p7tdqIg5dP-6.4S_LaZi1UFg
+docker tag hello-world:latest caas1devacr.azurecr.io/hello-world:latest
+docker push caas1devacr.azurecr.io/hello-world:latest
+
+cas1devacr: pull secrets
+da494b0c-ab64-4e03-bbc3-cfa5e7a9dc9c:8.DSQ0Hjo~p7tdqIg5dP-6.4S_LaZi1UFg
+
+*************************
+8050617417 r
+9591066977 h
+8095678027 --p
+9167408081 - s
+
+*************************
+ADMIN_PORTAL CHNAGES :
+
+API:GATEWAY_SERVICE_IMPL
+url = url + "?filter=id__in=0170768441c2000000000001001438f5";
+
+//START allegrato web app
+grunt serve --target=sit
+
+// Set siteId in GatewayDeviceStore.ts
+this.setSiteId('Sky63720119804815');
+
+//Comment out if condition in GatewayDeviceConfiguration.tsx
+      //if (gatewayDeviceStore.isAdminPortalTokenAvailable()) {
+      gatewayDeviceStore.getGatewaysBySiteId(); ---this should not be commentout
+      //}
+
+//chnage url in config.js to point local and QA
+https://devintegrated.azure-api.net/v2
+http://localhost:8080
+
+import '@scuf/common/honeywell-compact/theme.css';
+
+***************
+BLACK DUCK:
+bash <(curl -s -L https://detect.synopsys.com/detect.sh) --blackduck.url=https://blackduck.swtools.honeywell.com --blackduck.api.token=Njg0NDFmMzQtYWZiNy00ZWJlLWIyMmItNzYwODI5YjgyYzQyOjkzYWMzOTZlLTdjNzItNDczMS05ZTQ2LWU3YjZhNDAxNjJjZA== --detect.project.name=HCE_CB_ForgeConnect_GatewayManager --detect.project.version.name=202009009-GWAPI-okhttp --blackduck.trust.cert=true --detect.detector.search.depth=99 --detect.detector.search.continue=true --logging.level.com.synopsys.integration=DEBUG --detect.source.path=src/app/ --detect.output.path=src/build/results --detect.project.codelocation.name=HCE_CB_ForgeConnect_GatewayManager_20200909-GWAPI-okhttp
+
+
+https://blackduck.swtools.honeywell.com/api/projects/e508dbfd-d6ac-4f64-a111-439184dd1a35/versions/11761349-38bb-4b6e-bd90-c9e0616efe46/components?sort=projectName%20ASC&offset=0&limit=100&filter=bomInclusion%3Afalse&filter=bomMatchReviewStatus%3AREVIEWED
+
+***************************
+Gateway Static IP:
+
+nmcli -t device show eth0
+nmcli connection modify "Wired connection 2" ipv4.method manual ipv4.addresses "10.79.191.230/24"
+nmcli connection modify "Wired connection 2" ipv4.dns "199.63.219.166"
+nmcli connection modify "Wired connection 2" ipv4.gateway "10.79.191.1"
+
+****************************************************************************
+Bangalore LAB Gateways:
+
+Performance Gateway:
+172.31.67.230
+017230f3674100000000000100145485
+"serial_number" :"62C5P42"
+
+__________________________________________________________________
+
+create file command: fsutil file createnew notsupport.bin 55000000
+__________________________________________________________________
+ARM DEV Tenant: 016ec899f653ae6281e8193200000000
+*********************
+
+https://github.com/UPPY/enigma
+
+***************
+Suncity Cutomer:(Staging)
+Apikey: ak_1MDE3NWJjNDU4YjI2ZmE5MzE4ZTAzYzUyMDAwMDAwMDA0175d49834f0fa9318e03c5200000000roIKjWct7go9h1SZHOLyJZONLzGc0T6M
+TenantId: 0175bc458b26fa9318e03c5200000000
+GatewayId: 0175bc49e4a2000000000001001ebbbe
+SiteId: Fal63740775955850
+UName: admin
+Password: Password10
+**********************
+FOTA:
+sudo snap get hce-fcg-admin
+hce-pelion-edge.platform-version
+snap changes
+snap changes | tail -10
+sudo journalctl | grep FOTA
+sudo snap logs hce-pelion-edge.edge-core
+
+
+******************
+PVC path
+
+sudo su
+
+cd /var/snap/hce-pelion-edge/common/var/lib/kubelet/plugins/kubernetes.io/edge-pv/
+
+****************
+VSE site connection issue:
+
+sudo rm /var/snap/hce-fcg-admin/common/configuration_complete
+sudo snap restart hce-fcg-admin
+
+kill container :
+sudo hce-pelion-edge.docker rm -f 48551e6d32e6
+
+**************************
+Login to Pelion Terminal as local admin:
+
+ssh admin@localhost
+Password :Password10
+
+
+
+
+kubectl get configmap <name> -o yaml > name.yaml
+
+
+
+https://bitbucket.honeywell.com/projects/AFNZHGUS/repos/fc-shell-docker/pull-requests/3/diff#SecurityScan/.dockerignore
+
+
+https://bitbucket.honeywell.com/projects/AFNZHGUS/repos/fc-shell-docker/browse
+

@@ -1,0 +1,21 @@
+https://www.geeksforgeeks.org/experienced-interview-experiences-company-wise/
+SYStem Design Question:
+
+1) Design your own Process Control Block(PCB).
+2) Design a dashboard system. both HLD and LLD.
+3) Design a system to upload images and tag them, ability to search images with two or more tags particular tags
+4) Design a online shipment tracking system.
+5) Design a Netflix type system. start from HLD to LLD. detailed discussed happened on this
+discussion on search, video serving, authentication, encryption, dns lookup, which caching strategy would you chose?
+serving multi quality video etc
+6) Design chess game
+7) Design inventory system. (eg: library)
+
+******************
+https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/
+2) Segment Tree
+3) Java: Java8, {predicates, fuction interfaces, streams, optionals (Interview Question)}, Collections, multithreading, Concurency, Oops, JVM
+4) Microservices: spring secutity, spring JPA, Annotations, RestAPis, Microservices archetecture
+5)
+
+String [] str = {"ram", "kulwant","m"};

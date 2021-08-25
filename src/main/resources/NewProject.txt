@@ -1,0 +1,207 @@
+IJ license servers:
+http://acslicenses.honeywell.com:8088
+https://mantis.tridium.com/jbLicense/
+
+***************************************
+
+MY Gateway From Fixture:
+
+IP: 172.31.65.13
+admin
+Password10
+****************************************************************************
+Connect Through browser:
+
+https://172.31.65.13:443
+hce-fcg-admin.curl http://localhost:8081/status
+
+********************************
+nc -vz -v url 443  ==>To check port is opened or not
+nc -vz -u url
+*******************************************************************************
+Snap commans:
+sudo snap set hce-fcg-admin environment=qa
+sudo snap get hce-fcg-admin  => Get the environment details
+
+
+***********
+Snap comman localtion : cd /var/snap/hce-fcg-admin/common/
+
+Install:
+sudo snap install *.snap  --dangerous
+	
+LOGS:
+sudo snap logs hce-fcg-admin.remoteadmin
+
+sudo snap services hce-fcg-admin
+
+sudo snap find hce-fcg-admin = > to find which snap installed
+sudo snap find hce-fcg-admin ==> install snap
+sudo snap list
+sudo snap refresh hce-fcg-admin == > this is same as reinstallation
+**************************************************************************
+FOTA:
+sudo snap get hce-fcg-admin
+hce-pelion-edge.platform-version
+snap changes
+snap changes | tail -10
+sudo journalctl | grep FOTA
+sudo snap logs hce-pelion-edge.edge-core
+******************************************************
+SNAP_COMMON = /var/snap/hce-fcg-admin/common
+sudo snap info hce-fcg-admin --> Info about snap
+sudo snap changes
+sudo snap abort chnages
+snap connections hce-fcg-admin
+sudo snap abort ID
+************************************
+SSH GATEWAY FROM VM:
+ssh admin@172.31.65.13
+Password10
+
+Run Below command from Onboarding/onboarding
+snapcraft --use-lxd --add-ca-certificates /usr/local/share/ca-certificates
+snapcraft clean --use-lxd  //clean
+snapcraft --use-lxd
+
+Copy snap to gateway:
+scp hce-fcg-*.snap admin@172.31.65.13:.
+
+Copy install Script to the gateway
+scp ../scripts/install-snap.sh admin@192.168.0.108:.
+
+From the gateway
+./install-snap.sh clean
+
+***********************************
+fcg-admin-test --firewall
+fcg-admin-test --firewall --verbose
+
+*****************************************************************************
+
+sudo snap restart hce-fcg-admin
+sudo snap get hce-fcg-admin.nginx
+sudo snap info hce-fcg-admin.nginx
+
+******************************************************************************
+
+Peloin edge logs:
+snap logs -n=all pelion-edge.edge-core
+
+sudo snap logs -n=all pelion-edge.fp-edge
+
+sudo snap logs -n=all pelion-edge.kubelet
+
+sudo snap logs -f pelion-edge.dockerd
+
+sudo start stop pelion-edge
+sudo snap stop pelion-edge
+
+***************************************************************
+
+Git Command: git checkout -b release/3.1 --track remotes/origin/release/3.1
+
+Build Command: 
+go run main.go --firewall
+go run main.go --firewall --verbose
+
+Verify CheckSum Command:
+  certutil -hashfile C:/Users/H343428/Downloads/test/fcg-admin-test.zip SHA256
+  
+*******************************************************************************
+pushd \$GOPATH/src/bitbucket.honeywell.com/scm/fcg
+cd onboarding/onboarding/server/cmd/remoteadmin
+go install
+popd
+
+********************************************************************************
+  
+https://confluence.honeywell.com/pages/viewpage.action?spaceKey=Niagara&title=FC+Gateway+Diagnostics+and+Troubleshooting
+
+https://confluence.honeywell.com/pages/viewpage.action?spaceKey=Niagara&title=FC+Gateway+Diagnostics+and+Troubleshooting
+
+Simply Connect:
+https://confluence.honeywell.com/display/HFC/Simply+Connect
+
+
+Virtual GW Production: 
+
+
+PR:
+https://bitbucket.honeywell.com/projects/FCG/repos/onboarding/pull-requests/78/overview
+
+
+lxc list
+lxc delete <whatever came from list>
+lxc image list
+lxc image delete <whatever came from list>
+lxc network list
+lxc network delete <whatever came from list>
+echo ‘{“config”: {}}’ | lxc profile edit default
+lxc storage volume list default
+lxc storage volume delete default <whatever came from list>
+lxc storage delete default
+
+******************
+Install Snap from store
+
+snap list --all |grep hce-fcg-admin
+
+snap refresh hce-fcg-admin --edge
+snap install hce-fcg-admin --edge
+snap remove hce-fcg-admin
+
+DNS:
+cat /etc/resolv.conf
+
+************************************************************************************
+Internal CURL Commands:
+hce-fcg-admin.curl http://localhost:8081/status
+hce-fcg-admin.curl http://localhost/v2/snaps/system/conf
+
+sudo snap get hce-fcg-admin environment
+
+*******
+
+# Get the gopacket package from GitHub
+go get github.com/google/gopacket
+# Pcap dev headers might be necessary
+sudo apt-get install libpcap-dev
+
+
+//Read From file
+sudo tcpdump -r fcgAdmin_packets.pcap
+tcpdump -qns 0 -X -r fcgAdmin_packets.pcap
+tcpdump -qns 0 -A -r fcgAdmin_packets.pcap
+
+*************************************************************************************
+Monday:
+Tuesday: 
+Wednesday: 
+Thursday:
+Friday: 
+
+*************************
+https://blog.logrocket.com/react-end-to-end-testing-jest-puppeteer/
+
+Sprint 1 - 21 April - 4 May
+Sprint 2 - 5 May - 18 may
+Sprint 3 - 19 May - 1 June
+Sprint 4 - 2 June - 15 June
+Sprint 5 - 16 June - 29 June
+Sprint 6 - 30 June - 13 July
+
+
+Mock GO:
+https://www.youtube.com/watch?v=z2pVnkw2HE0&t=73s
+
+
+
+****************
+SET Environment to the gateway:
+
+Set: sudo snap set hce-fcg-admin environment=qa
+Get: sudo snap get hce-fcg-admin
+
+
+

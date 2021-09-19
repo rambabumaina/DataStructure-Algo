@@ -24,6 +24,8 @@ public class CheckForBalancedBrackets {
             if (ch == ']' || ch == ')' || ch == '}') {
                 if (!stack.isEmpty() && getOpeningBraket(ch) == stack.pop()) {
                     continue;
+                }else{
+                    break;
                 }
             }
             stack.push(ch);

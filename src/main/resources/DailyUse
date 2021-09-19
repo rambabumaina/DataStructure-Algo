@@ -215,13 +215,7 @@ docker push caas1devacr.azurecr.io/hello-world:latest
 cas1devacr: pull secrets
 da494b0c-ab64-4e03-bbc3-cfa5e7a9dc9c:8.DSQ0Hjo~p7tdqIg5dP-6.4S_LaZi1UFg
 
-*************************
-8050617417 r
-9591066977 h
-8095678027 --p
-9167408081 - s
 
-*************************
 ADMIN_PORTAL CHNAGES :
 
 API:GATEWAY_SERVICE_IMPL

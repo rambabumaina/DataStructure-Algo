@@ -1,4 +1,4 @@
-package geeksforgeeks.amazon.arrays;
+package geeksforgeeks.amazon.arrays.windowSliding;
 
 import java.util.stream.IntStream;
 

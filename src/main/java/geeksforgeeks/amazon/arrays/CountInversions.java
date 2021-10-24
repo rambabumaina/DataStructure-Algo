@@ -22,7 +22,7 @@ public class CountInversions {
         return inversionCount_util(arr, 0, (int)N-1);
     }
 
-    //Divide the array in tow part until it become non
+    //Divide the array into parts until it will become non
     // call count to get the count
     static long inversionCount_util(long[] arr, int low, int high) {
         long count = 0;

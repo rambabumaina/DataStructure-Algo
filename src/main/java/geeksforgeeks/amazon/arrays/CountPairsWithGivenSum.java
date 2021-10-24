@@ -11,7 +11,7 @@ public class CountPairsWithGivenSum {
     public static void main(String[] args) {
         int arr[] = {1, 1, 1, 1};
         int k = 2;
-        getPairsCount(arr, arr.length, k);
+        System.out.println(getPairsCount(arr, arr.length, k));
     }
 
     static int getPairsCount(int[] arr, int n, int k) {

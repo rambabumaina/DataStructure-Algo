@@ -1,14 +1,12 @@
 package leetcode.arrays;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoSum {
     public static void main(String[] args) {
-        int[] nums = {3, 2, 4};
-        int target = 6;
-        int[] result = twoSum(nums, target);
+        int[] nums = {2,7,11,15};
+        int target = 9;
+        int[] result = twoSum_map(nums, target);
         Arrays.stream(result).forEach(s -> System.out.print(s));
     }
 
@@ -28,12 +26,21 @@ public class TwoSum {
         return result;
     }
 
-    public static int[] twoSum_Map(int[] nums, int target) {
+    public static int[] twoSum_map(int[] nums, int target) {
         int[] result = new int[2];
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
         for (int i = 0; i < nums.length; i++) {
+
             int complement = target - nums[i];
-            map.put(complement,i);
+
+            if(map.containsKey(complement)){
+                result[0] = map.get(complement);
+                result[1] = i;
+                break;
+            }else {
+                map.put(nums[i], i);
+            }
         }
 
         return result;

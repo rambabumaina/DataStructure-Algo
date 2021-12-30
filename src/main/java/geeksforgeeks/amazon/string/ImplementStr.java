@@ -19,7 +19,6 @@ public class ImplementStr {
                     }
                     break;
                 }
-                System.out.println(m+" "+j);
                 if (m == j+1) {
                     return i - j;
                 } else {

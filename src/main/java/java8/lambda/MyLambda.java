@@ -3,6 +3,12 @@ package java8.lambda;
 import java8.functionalInterface.MyFunctionalInterface;
 
 public class MyLambda {
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
     public static void main(String[] args) {
 
         // One Way using Anonymous inner class

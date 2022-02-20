@@ -1,22 +1,16 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.Date;
 
 public class CompareList {
     public static void main(String[] args) {
-
-        String ert = "ram,meena";
-        List<String> ertL = new ArrayList<>(Arrays.asList(ert.split(",")));
-        List<String> adgL = new ArrayList<>(Arrays.asList("ram","maina","meena"));
-
-        System.out.println(ert);
-        System.out.println(adgL);
-
-        adgL.retainAll(ertL);
-
-        System.out.println(ert);
-        System.out.println(adgL);
+        Date in = new Date();
+        Instant instant = Instant.ofEpochMilli(in.getTime());
+        LocalDateTime ldt = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
+        Date date = Date.from(instant);
+        System.out.println(date);
     }
 }

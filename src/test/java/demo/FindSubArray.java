@@ -1,6 +1,5 @@
 package demo;
 
-import com.sun.javafx.fxml.builder.URLBuilder;
 
 public class FindSubArray {
     public static void main(String[] args) {

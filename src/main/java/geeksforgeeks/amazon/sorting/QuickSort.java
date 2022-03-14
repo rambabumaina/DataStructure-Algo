@@ -2,19 +2,23 @@ package geeksforgeeks.amazon.sorting;
 
 import java.util.Arrays;
 
-//O(nlogn) best case time complexcity
-// o(n)2 in worst case
-
-//Quick sort follows devide and conquer technique
-//Quick sort is fast for small elements as compare to merger sort
-//Create boundary with pivot element where all left side elements are less than or equals with pivot
-// all the elements right side of list is grater then pivot
+/**
+ *  O(nlogn) best case time complexcity
+ *  O(n^2) in worst case
+ */
 
 
-//The algorithm picks a pivot element, rearranges the array elements in such a way that
-//        all elements smaller than the picked pivot element move to left side of pivot,
-//        and all greater elements move to right side.
-//        Finally,the algorithm recursively sorts the subarrays on left and right of pivot element.
+/**
+ * Quick sort follows devide and conquer technique
+ * Quick sort is fast for small elements as compare to merger sort
+ * Create boundary with pivot element where all left side elements are less than or equals with pivot and all the elements right side of list is grater then pivot
+ *
+ * The algorithm picks a pivot element, rearranges the array elements in such a way that
+ * all elements smaller than the picked pivot element move to left side of pivot, and all greater elements move to right side.
+ * Finally,the algorithm recursively sorts the sub arrays on left and right of pivot element.
+ *
+ */
+
 public class QuickSort {
     public static void main(String[] args) {
 

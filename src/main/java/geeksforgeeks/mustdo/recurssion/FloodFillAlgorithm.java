@@ -1,7 +1,5 @@
 package geeksforgeeks.mustdo.recurssion;
 
-import static com.sun.org.apache.bcel.internal.classfile.Utility.printArray;
-
 //https://practice.geeksforgeeks.org/problems/flood-fill-algorithm1856/1
 public class FloodFillAlgorithm {
     public static void main(String[] args) {

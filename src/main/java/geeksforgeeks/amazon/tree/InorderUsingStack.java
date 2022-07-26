@@ -10,6 +10,7 @@ public class InorderUsingStack {
 
         root.left.left = new Node(40);
         root.left.right = new Node(60);
+
         root.right.right = new Node(50);
         root.right.right.right = new Node(70);
 

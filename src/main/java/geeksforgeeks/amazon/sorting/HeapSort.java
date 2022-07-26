@@ -31,8 +31,8 @@ public class HeapSort {
         }
     }
 
-    //Heap should follow COmplate binary tree or almost complete binary tree properties
-    //find a root node and compare left and right child should be lessthen(miheap)/greaterthan(maxheap) if not swap
+    //Heap should follow Complete binary tree or almost complete binary tree properties
+    //Find a root node and compare left and right child should be less than(min heap)/greater than(maxheap) if not swap
     public static void heapify(int[] arr, int index, int size){
 
         int leftChild = index*2+1;

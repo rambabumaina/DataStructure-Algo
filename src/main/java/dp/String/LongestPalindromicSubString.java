@@ -13,7 +13,6 @@ public class LongestPalindromicSubString {
     public static String longestPalindrome(String s) {
         int len = s.length();
         int[][] dp = new int[len][len];
-
         int maxLen = 1;
 
 
@@ -32,6 +31,7 @@ public class LongestPalindromicSubString {
         }
 
         //Fill more than 2 len
+        // Here K is a length of string
         for (int k = 3; k < len; k++) {
 
             for (int i = 0; i < len-k+1; i++) {
